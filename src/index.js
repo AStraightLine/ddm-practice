@@ -1,15 +1,17 @@
 const exploreNav = document.getElementById('navItemExplore')
+const exploreDD = document.getElementById('exploreDD')
 
-const exploreNavHandler = () => {
-    const exploreDD = document.getElementById('exploreDD')
+const exploreNavHandler = (navItem, dropDownContainer) => {
 
     if (exploreDD.classList.contains('navItemOpen')) {
-        exploreNav.classList.remove('navItemClicked')
-        exploreDD.classList.remove('navItemOpen')
+        navItem.classList.remove('navItemClicked')
+        dropDownContainer.classList.remove('navItemOpen')
     } else if (!exploreNav.classList.contains('navItemOpen')) {
-        exploreNav.classList.add('navItemClicked')
-        exploreDD.classList.add('navItemOpen')
+        navItem.classList.add('navItemClicked')
+        dropDownContainer.classList.add('navItemOpen')
     }
 }
 
-exploreNav.addEventListener('click', exploreNavHandler)
+exploreNav.addEventListener('click', function () {
+    exploreNavHandler(exploreNav, exploreDD)
+})
