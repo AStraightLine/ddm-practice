@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#navContainer {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1 1 auto;
+}
+
+.navItem {
+    width: 100px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 25px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    background-color: #778899;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 1px grey;
+}
+
+.navItemClicked {
+    animation: navItemClicked 1s ease-in-out 0s 1;
+}
+
+.dd {
+    display: none;
+    background-color: #CCD2D9;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 1px grey;
+    font-size: 14px;
+    color: black;
+}
+
+.ddItem {
+    border-bottom: 1px solid grey;
+}
+
+.navItemOpen {
+    display: flex;
+    flex-direction: column;
+    animation: navOpen 1s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes navItemClicked {
+    0% {
+
+    }
+
+    50% {
+        background-color: #063970;
+    }
+
+    100% {
+
+    }
+}
+
+@keyframes navOpen {
+    0% {
+        opacity: 0;
+        width: 100px;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        width: 100px;
+        height: 100px;
+    }
+}

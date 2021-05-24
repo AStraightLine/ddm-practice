@@ -1,0 +1,1 @@
+(()=>{const e=document.getElementById("navItemExplore");e.addEventListener("click",(()=>{const t=document.getElementById("exploreDD");t.classList.contains("navItemOpen")?(e.classList.remove("navItemClicked"),t.classList.remove("navItemOpen")):e.classList.contains("navItemOpen")||(e.classList.add("navItemClicked"),t.classList.add("navItemOpen"))}))})();
